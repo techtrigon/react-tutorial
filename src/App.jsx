@@ -2,11 +2,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import Home from './components/Home';
 import Us from './components/Us';
-import Uc from './components/Uc';
-import Uc2 from "./components/Uc2";
-import Uc3 from "./components/Uc3";
+import Ue from './components/Ue';
+import Ucb from './components/Ucb';
+import Ucb2 from "./components/Ucb2";
+import Ucb3 from "./components/Ucb3";
 import Um from "./components/Um";
-
+import Uc from "./components/Uc";
 
 export default function App () {
   return (
@@ -14,10 +15,12 @@ export default function App () {
       <Routes>
         <Route path="/" element={ <Home /> } />
         <Route path="/us" element={ <Us /> } />
-        <Route path="/uc" element={ <Uc /> } />
-        <Route path="/uc2" element={ <Uc2 /> } />
-        <Route path="/uc3" element={ <Uc3 /> } />
+        <Route path="/ue" element={ <Ue /> } />
+        <Route path="/ucb" element={ <Ucb /> } />
+        <Route path="/ucb2" element={ <Ucb2 /> } />
+        <Route path="/ucb3" element={ <Ucb3 /> } />
         <Route path="/um" element={ <Um /> } />
+        <Route path="/uc" element={ <Uc /> } />
       </Routes>
     </BrowserRouter>
   );

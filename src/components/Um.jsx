@@ -1,4 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
+import Homebtn from './Homebtn';
 
 const Um = () => {
   const [ btn1, setBtn1 ] = useState( false );
@@ -12,6 +13,7 @@ const Um = () => {
   }, [] );
   return (
     <>
+      <Homebtn />
       <button onClick={ () => setCount( count + 1 ) }>CLICK ME</button>
       <div>Value of count : { count }</div>
       <div>value of fun1 : </div>

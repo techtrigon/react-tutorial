@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
+import Homebtn from './Homebtn';
 
-const Uc2 = () => {
+const Ucb2 = () => {
   const [ count, setCount ] = useState( 0 );
   const [ flipval, setFlipval ] = useState( false );
 
@@ -22,6 +23,7 @@ const Uc2 = () => {
 
   return (
     <div>
+      <Homebtn />
       <h3>Count: { count }</h3>
       <button onClick={ increment }>Increment</button>
       <h3>Flipval: { flipval.toString() }</h3>
@@ -30,4 +32,4 @@ const Uc2 = () => {
   );
 };
 
-export default Uc2;
+export default Ucb2;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { useState, useCallback, useMemo, memo, useEffect } from "react";
+import Homebtn from './Homebtn';
 
 // Now Ch3 will not rerender if props is not changed
 const Ch3 = React.memo( ( { callbackFunction } ) => {
@@ -14,7 +14,7 @@ const Ch3 = React.memo( ( { callbackFunction } ) => {
   return ( <p>Child: { value }</p> );
 } );
 
-function Uc3 () {
+function Ucb3 () {
   const [ count, setCount ] = React.useState( 0 );
   const [ another, setAnother ] = React.useState( 0 );
 
@@ -30,6 +30,7 @@ function Uc3 () {
 
   return (
     <div>
+      <Homebtn />
       <Ch3 callbackFunction={ countCallback } />
       <button onClick={ () => setCount( count + 1 ) }>
         Change callback
@@ -43,4 +44,4 @@ function Uc3 () {
 }
 
 
-export default Uc3;
+export default Ucb3;

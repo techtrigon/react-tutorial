@@ -4,31 +4,42 @@ import { NavLink, useNavigate } from 'react-router-dom';
 const Home = () => {
   return (
     <div>
-      <button>
+      <h1>HOME</h1>
         <NavLink to='/us'>
+        <button>
           USESTATE
+        </button>
         </NavLink>
+      <NavLink to='/ue'>
+        <button>
+          USEEFFECT
       </button>
-      <button>
-        <NavLink to='/uc'>
+      </NavLink>
+      <NavLink to='/ucb'>
+        <button>
           USECALLBACK
-        </NavLink>
-      </button>
-      <button>
-        <NavLink to='/uc2'>
+        </button>
+      </NavLink>
+      <NavLink to='/ucb2'>
+        <button>
           USECALLBACK 2
-        </NavLink>
-      </button>
-      <button>
-        <NavLink to='/uc3'>
+        </button>
+      </NavLink>
+      <NavLink to='/ucb3'>
+        <button>
           USECALLBACK 3
+        </button>
         </NavLink>
+      <NavLink to='/um'>
+        <button>
+          USEMEMO & MEMO
       </button>
+      </NavLink>
+      <NavLink to='/uc'>
       <button>
-        <NavLink to='/um'>
-          USEMEMO
-        </NavLink>
-      </button>
+          USECONTEXT
+        </button>
+      </NavLink>
     </div>
   );
 };

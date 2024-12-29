@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useMemo, } from 'react';
+import React, { useState } from 'react';
+import Homebtn from './Homebtn';
 
 
 const Us = () => {
@@ -47,6 +48,7 @@ const Us = () => {
 
   return (
     <>
+      <Homebtn />
       <div className="dmain">
         <button onClick={ handleFlip }>FLIP</button>
         <h2>flipval = { flipval.toString() }</h2>
@@ -56,7 +58,7 @@ const Us = () => {
         <h2>{ valuesfn }</h2>
       </div>
 
-
+      {/* ---------------------------------------------- new component ---------------------------------------------- */ }
       <div className="dmain">
         <h1>Your age: { age }</h1>
         <button onClick={ () => {
@@ -69,15 +71,18 @@ const Us = () => {
         } }>+1</button>
       </div>
 
-
+      {/* ---------------------------------------------- new component ---------------------------------------------- */ }
       <div className="dmain">
         <button onClick={ () => setShow( ( prev ) => !prev ) }>Toggle User</button>
         {/* key to manipulate state changes */ }
-        {/* IF position is same of rendering then state is preserved else not, unless same "key" is passed to different components*/ }
+        {/* IF position is same of rendering OR same "key" is passed to different components then only state is preserved else not */ }
         { show && <User name="Chimezie" key="1" /> }
         { !show && <User name="Innocent" /> }
-      </div>
 
+        {/* TRY BELOW (same position of render) */ }
+        { show ? ( <User name="Chimezie" /> ) : ( <User name="Innocent" /> ) }
+
+      </div>
 
     </>
   );
